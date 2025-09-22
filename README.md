@@ -1,99 +1,82 @@
-# Sistema de Automação de E-mails
+# Sistema de Automação de E-mails - ENADE 2025
 
 ## 📋 Descrição
 
-Sistema desenvolvido em Python para automatizar o envio de e-mails em massa com anexos PDF. Com interface gráfica intuitiva e integração direta com Microsoft Outlook.
+Sistema desenvolvido em Python para automatizar o envio de e-mails em massa com anexos múltiplos. Inclui autenticação Firebase, interface gráfica moderna, agendamento de envios e gerenciamento de listas de destinatários.
 
 ## 🚀 Principais Funcionalidades
 
-- **Interface gráfica intuitiva** com tkinter
-- **Seleção de pasta via GUI** para localizar arquivos PDF
-- **Envio automatizado** via Microsoft Outlook
-- **Mapeamento automático de PDFs** por cidade
-- **Template HTML personalizado** para validação
-- **Log em tempo real** do processo de envio
-- **Processamento em background** sem travar a interface
-- **Validação completa** de campos e anexos
+- **🔐 Autenticação Firebase** - Login/cadastro seguro com recuperação de senha
+- **📧 Múltiplos anexos** por destinatário com templates HTML personalizáveis
+- **⏰ Agendamento** de envios com data/hora específica
+- **📊 Gerenciamento de listas** - CRUD completo com exportação/importação CSV
+- **☁️ Salvamento na nuvem** - Sincronização automática via Firebase
+- **🎯 Interface moderna** - tkinter/ttk com modo de edição e log em tempo real
 
-## 🛠️ Tecnologias Utilizadas
+## 🛠️ Tecnologias
 
 - **Python 3.x** - Linguagem principal
-- **tkinter** - Interface gráfica
-- **pywin32** - Integração com Outlook
-- **threading** - Processamento em background
-- **pathlib, unicodedata** - Manipulação de arquivos e texto
+- **Firebase** - Autenticação e banco de dados (Pyrebase)
+- **tkinter/ttk** - Interface gráfica moderna
+- **pywin32** - Integração com Microsoft Outlook
 
-## 📦 Requisitos
+## 📦 Requisitos e Instalação
 
-### Sistema
-- Windows (obrigatório para integração com Outlook)
-- Microsoft Outlook instalado e configurado
-- Python 3.6 ou superior
+### Pré-requisitos
+- Windows + Microsoft Outlook configurado
+- Python 3.6+ e conexão com internet
 
-### Dependências
+### Instalação
 ```bash
-pip install pywin32
+git clone https://github.com/VicorVasconcelos/API.git
+cd API
+pip install pyrebase4 pywin32
+python "# --- IMPORTS ---.py"
 ```
 
-## ⚙️ Configuração
+## ⚙️ Configuração Básica
 
-### 1. E-mails de Cópia
-Edite a lista `copia_emails` no arquivo `import.py`:
+Configure suas credenciais Firebase no código e edite a lista de e-mails de cópia:
+
 ```python
-copia_emails = [
-    "email1@exemplo.com",
-    "email2@exemplo.com"
-]
+# Firebase Config
+firebaseConfig = { /* suas credenciais */ }
+
+# E-mails de cópia
+copia_emails = ["email1@exemplo.com", "email2@exemplo.com"]
 ```
 
-### 2. Padrão dos PDFs
-Os arquivos devem seguir o formato: `qualquer_nome_CIDADE.pdf`
-
-Exemplos:
-- `distribuicao_salas_SAO_PAULO.pdf`
-- `enade_BRASILIA.pdf`
+**Formatos suportados**: PDF, XLSX, DOCX, JPG, PNG
 
 ## 🎯 Como Usar
 
-1. **Instalação**
-   ```bash
-   git clone https://github.com/VicorVasconcelos/API.git
-   cd API
-   pip install pywin32
-   ```
+1. **Login**: Cadastre-se ou faça login na tela inicial
+2. **Pasta**: Selecione a pasta com os arquivos
+3. **Destinatários**: Adicione e-mails e selecione arquivos específicos
+4. **Configuração**: Ajuste assunto, template e agendamento se necessário
+5. **Envio**: Clique em "Enviar E-mails" e acompanhe o progresso
 
-2. **Execução**
-   ```bash
-   python import.py
-   ```
+**Funcionalidades extras**: Templates salvos, exportação CSV, edição com clique duplo
 
-3. **Interface**
-   - Selecione a pasta com os PDFs
-   - Digite o e-mail do destinatário
-   - Configure os e-mails de cópia (CC)
-   - Informe o nome da cidade
-   - Clique em "Enviar E-mail"
-   - Acompanhe o progresso no log
+## � Versão: v9.3
 
-## 🛡️ Funcionalidades Técnicas
+**Principais novidades:**
+- ✅ Autenticação Firebase + múltiplos anexos
+- ✅ Agendamento + templates personalizáveis  
+- ✅ Exportação CSV + interface moderna
 
-- **Normalização de texto** para compatibilidade de nomes
-- **Validação de anexos** antes do envio
-- **Tratamento de erros** com mensagens detalhadas
-- **Log colorido** para diferentes tipos de mensagem
+## 🔧 Problemas Comuns
+
+- **Firebase**: Verifique credenciais e conexão
+- **Outlook**: Execute como administrador se necessário
+- **Arquivos**: Confirme formatos (.pdf, .xlsx, .docx, .jpg, .png)
+- **Agendamento**: Use formato dd/mm/aaaa hh:mm
 
 ## 👨‍💻 Autores
 
 **Victor Vasconcelos** e **Samuel Almeida**
-- GitHub: [@VicorVasconcelos](https://github.com/VicorVasconcelos)
-- GitHub: [@oak-samc](https://github.com/oak-samc)
-
-## 📞 Suporte
-
-- E-mail: victor.vasconcelos@cebraspe.org.br
-- Telefone: (61) 98438-5187
+- GitHub: [@VicorVasconcelos](https://github.com/VicorVasconcelos) | [@oak-samc](https://github.com/oak-samc)
 - Issues: [GitHub Issues](https://github.com/VicorVasconcelos/API/issues)
 
 ---
-
-**⚠️ Nota**: Sistema desenvolvido especificamente para o ENADE 2025. Requer Microsoft Outlook no Windows.
+**⚠️ Nota**: Requer Windows + Outlook + internet para funcionalidades completas.
