@@ -1,4 +1,4 @@
-# Sistema de Automação de E-mails - ENADE 2025
+# Sistema de Automação de E-mails
 
 ## 📋 Descrição
 
