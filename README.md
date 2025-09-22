@@ -2,7 +2,50 @@
 
 ## 📋 Descrição
 
-Sistema desenvolvido em Python para automatizar o envio de e-mails em massa com anexos múltiplos. Inclui autenticação Firebase, interface gráfica moderna, agendamento de envios e gerenciamento de listas de destinatários.
+Sist## 📈 Versão: v9.3
+
+**Principais novidades:**
+- ✅ Autenticação Firebase + múltiplos anexos
+- ✅ Agendamento + templates personalizáveis  
+- ✅ Exportação CSV + interface moderna
+
+## 🔄 Histórico de Atualizações
+
+### v9.3 - Setembro 2025 (Atual)
+**🔐 Sistema de Autenticação**
+- Implementado login/cadastro via Firebase Authentication
+- Recuperação de senha por e-mail
+- Sessões seguras com tokens JWT
+- Validação de usuários em tempo real
+
+**📧 Melhorias no Envio de E-mails**
+- Suporte a múltiplos anexos por destinatário
+- Templates HTML personalizáveis e salvos
+- Agendamento preciso com validação de data/hora
+- Intervalos configuráveis entre envios (3s padrão)
+
+**📊 Gerenciamento de Dados**
+- Banco de dados Firebase Realtime Database
+- Exportação/importação de listas via CSV
+- Sincronização automática na nuvem
+- Modo de edição inline com clique duplo
+
+**🎨 Interface Modernizada**
+- Migração para componentes ttk (visual moderno)
+- Treeview para visualização de listas
+- Log colorido com timestamps
+- Barra de progresso visual em tempo real
+
+**🔧 Melhorias Técnicas**
+- Validação aprimorada de e-mails (regex otimizado)
+- Processamento assíncrono sem travamento
+- Tratamento robusto de erros
+- Suporte expandido: PDF, XLSX, DOCX, JPG, PNG
+
+### Versões Anteriores
+- **v8.x**: Sistema básico de envio com Outlook
+- **v7.x**: Interface inicial em tkinter
+- **v6.x**: Funcionalidades de mapeamento de arquivos envolvido em Python para automatizar o envio de e-mails em massa com anexos múltiplos. Inclui autenticação Firebase, interface gráfica moderna, agendamento de envios e gerenciamento de listas de destinatários.
 
 ## 🚀 Principais Funcionalidades
 
