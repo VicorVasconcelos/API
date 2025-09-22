@@ -2,7 +2,7 @@
 
 ## 📋 Descrição
 
-Sist## 📈 Versão: v9.3
+Versão: v9.3
 
 **Principais novidades:**
 - ✅ Autenticação Firebase + múltiplos anexos
